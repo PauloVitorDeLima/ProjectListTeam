@@ -14,6 +14,8 @@ namespace ListaEncadeadaDeTimesBrasileiros
 {
     public partial class TelaPrincipal : Form
     {
+        private static AlteraListaTimes alteraListaTimes = new AlteraListaTimes();
+
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -21,37 +23,62 @@ namespace ListaEncadeadaDeTimesBrasileiros
 
         private void BtAdicionarInicio_Click(object sender, EventArgs e)
         {
-            if (txtBxNomeTime != null &&
-                TxtBxEstadio != null &&
-                TxtBxTreinador != null &&
-                numericJogadores != null)
+            if (validateField())
             {
                 //Popular as variaveis
                 String Time = txtBxNomeTime.ToString();
                 String Estadio = TxtBxEstadio.ToString();
                 String Treinador = TxtBxTreinador.ToString();
                 int Jogador = Convert.ToInt32(numericJogadores.Value);
+                Time timeNovo;
 
-                NodeTime times, head, tail;
-                times = new NodeTime();
-                Time time;
-                
-                //Inserir Valor
-                time = new Time() {nomeTime = Time, nomeEstadio = Estadio, nomeTreinador = Treinador, quantJogador = Jogador};
-                AlteraListaTimes alteraListaTimes = new AlteraListaTimes();
-                tail = head = new NodeTime() { dados = time, Anterior = null, Proximo = null};
-                alteraListaTimes.InsereInicio(times, head, tail);
+                //Insere Valores ao Time
+                timeNovo = new Time() {nomeTime = Time, nomeEstadio = Estadio, nomeTreinador = Treinador, quantJogador = Jogador};
+                //Insere o time na lista
+                alteraListaTimes.InsereInicio(timeNovo);
 
+                RichTextBox.Clear();
+                RichTextBox.AppendText("NOVO TIME CADASTRADO: \n ");
+            }
+        }
 
-                    RichTextBox.AppendText("LISTA DE TIMES CADASTRADOS");
-                    RichTextBox.AppendText("Nome do time: " + time.nomeTime);
+        private void BtAdicionarFinal_Click(object sender, EventArgs e)
+        {
+            if (validateField())
+            {
+                //Popular as variaveis
+                String Time = txtBxNomeTime.ToString();
+                String Estadio = TxtBxEstadio.ToString();
+                String Treinador = TxtBxTreinador.ToString();
+                int Jogador = Convert.ToInt32(numericJogadores.Value);
+                Time timeNovo;
+
+                //Insere Valores ao Time
+                timeNovo = new Time() { nomeTime = Time, nomeEstadio = Estadio, nomeTreinador = Treinador, quantJogador = Jogador };
+                //Insere o time na lista
+                alteraListaTimes.InsereFim(timeNovo);
+
+                RichTextBox.Clear();
+                RichTextBox.AppendText("NOVO TIME CADASTRADO: \n ");
             }
         }
 
         private void BtListar_Click(object sender, EventArgs e)
         {
-
             
+            alteraListaTimes.Listar();
         }
+        public bool validateField()
+        {
+            if (txtBxNomeTime != null &&
+                TxtBxEstadio != null &&
+                TxtBxTreinador != null &&
+                numericJogadores != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

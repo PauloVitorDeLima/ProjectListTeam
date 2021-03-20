@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo\\source\\repos\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj": {}
+    "C:\\Users\\paulo\\source\\repos\\ProjectListTeam\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo\\source\\repos\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj": {
+    "C:\\Users\\paulo\\source\\repos\\ProjectListTeam\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\ProjectListTeam\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj",
         "projectName": "ListaEncadeadaDeTimesBrasileiros",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj",
+        "projectPath": "C:\\Users\\paulo\\source\\repos\\ProjectListTeam\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\ListaEncadeadaDeTimesBrasileiros\\ListaEncadeadaDeTimesBrasileiros\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\source\\repos\\ProjectListTeam\\ListaEncadeadaDeTimesBrasileiros\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",

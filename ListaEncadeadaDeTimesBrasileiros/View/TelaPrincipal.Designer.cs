@@ -48,7 +48,7 @@ namespace ListaEncadeadaDeTimesBrasileiros
             // 
             // BtAdicionarInicio
             // 
-            this.BtAdicionarInicio.Location = new System.Drawing.Point(12, 284);
+            this.BtAdicionarInicio.Location = new System.Drawing.Point(279, 286);
             this.BtAdicionarInicio.Name = "BtAdicionarInicio";
             this.BtAdicionarInicio.Size = new System.Drawing.Size(225, 23);
             this.BtAdicionarInicio.TabIndex = 0;
@@ -124,12 +124,13 @@ namespace ListaEncadeadaDeTimesBrasileiros
             // 
             // BtAdicionarFinal
             // 
-            this.BtAdicionarFinal.Location = new System.Drawing.Point(264, 284);
+            this.BtAdicionarFinal.Location = new System.Drawing.Point(21, 286);
             this.BtAdicionarFinal.Name = "BtAdicionarFinal";
             this.BtAdicionarFinal.Size = new System.Drawing.Size(225, 23);
             this.BtAdicionarFinal.TabIndex = 12;
             this.BtAdicionarFinal.Text = "ADICIONAR NO FINAL DA LISTA";
             this.BtAdicionarFinal.UseVisualStyleBackColor = true;
+            this.BtAdicionarFinal.Click += new System.EventHandler(this.BtAdicionarFinal_Click);
             // 
             // BtRemoverInicio
             // 

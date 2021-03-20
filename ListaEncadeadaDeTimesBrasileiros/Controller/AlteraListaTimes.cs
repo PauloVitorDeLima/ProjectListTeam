@@ -9,21 +9,56 @@ namespace ListaEncadeadaDeTimesBrasileiros.Controller
 {
     class AlteraListaTimes
     {
-        public bool InsereInicio(NodeTime time, NodeTime Head, NodeTime Tail )
+        NodeTime Head, Tail;
+
+
+
+        public void InsereFim(Time time)
         {
+            NodeTime nodeTime = new NodeTime() { dados = time};
 
             if (Head == null)
             {
-                Head = time;
-                Head.Proximo = null;
-                Tail = time;
-                return true;
+                Head = nodeTime;
             }
+            else
+            {
+                Tail.Proximo = nodeTime;
+            }
+            Tail = nodeTime;
+        }
+        public void InsereInicio(Time time)
+        {
+            NodeTime nodeTime = new NodeTime() { dados = time };
 
-            Tail.Proximo = time;
-            Tail = time;
-            Tail.Proximo = null;
-            return true;
+            if (Head == null)
+            {
+                Head = nodeTime;
+                Tail = nodeTime;
+            }
+            else
+            {
+                nodeTime.Proximo = Head;
+            }
+            Head = nodeTime;
+        }
+        public void Listar()
+        {
+
+            if (Head != null)
+            {
+                NodeTime temp = Head;
+                while (temp != null)
+                {
+                    Console.Write(temp.dados + " ");
+                    temp = temp.Proximo;
+                }
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("\nLista vazia");
+            }
         }
     }
 }
