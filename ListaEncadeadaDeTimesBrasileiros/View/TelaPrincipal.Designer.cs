@@ -64,6 +64,7 @@ namespace ListaEncadeadaDeTimesBrasileiros
             this.BtRemoverFinal.TabIndex = 1;
             this.BtRemoverFinal.Text = "Remover do final";
             this.BtRemoverFinal.UseVisualStyleBackColor = true;
+            this.BtRemoverFinal.Click += new System.EventHandler(this.BtRemoverFinal_Click);
             // 
             // TxtBxEstadio
             // 
@@ -140,6 +141,7 @@ namespace ListaEncadeadaDeTimesBrasileiros
             this.BtRemoverInicio.TabIndex = 13;
             this.BtRemoverInicio.Text = "Remover do inicio";
             this.BtRemoverInicio.UseVisualStyleBackColor = true;
+            this.BtRemoverInicio.Click += new System.EventHandler(this.BtRemoverInicio_Click);
             // 
             // RichTextBox
             // 

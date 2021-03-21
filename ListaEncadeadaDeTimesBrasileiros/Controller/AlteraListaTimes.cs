@@ -42,22 +42,58 @@ namespace ListaEncadeadaDeTimesBrasileiros.Controller
             }
             Head = nodeTime;
         }
-        public void Listar()
+        public void removerInicio()
         {
 
+            if (Head != null)
+            {
+                Head = Head.Proximo;
+            }
+        }
+        public void removerFinal()
+        {
+
+            if (Head == null)
+                return;
+
+            if (Head.Proximo == null)
+            {
+                Head = null;
+            }
+            else
+            {
+                NodeTime ultimo = Head.Proximo;
+                NodeTime penultimo = Head;
+
+                while (ultimo.Proximo != null)
+                {
+                    penultimo = ultimo;
+                    ultimo = ultimo.Proximo;
+                }
+                penultimo.Proximo = null;
+            }
+        }
+        public String Listar()
+        {
+            String lista = null;
+            
             if (Head != null)
             {
                 NodeTime temp = Head;
                 while (temp != null)
                 {
-                    Console.Write(temp.dados + " ");
+                    lista += " \n NOVO CONJUNTO DE DADOS";
+                    lista += "\n Nome do Time: " +temp.dados.nomeTime;
+                    lista += "\n Nome do estadio: " + temp.dados.nomeEstadio;
+                    lista += "\n Nome do Treinador: " + temp.dados.nomeTreinador;
+                    lista += "\n Quantidade de Jogadores: " + temp.dados.quantJogador.ToString();
                     temp = temp.Proximo;
                 }
-                Console.WriteLine();
+                return lista;
             }
             else
             {
-                Console.WriteLine("\nLista vazia");
+                return lista = "Nenhum dado encontrado";
             }
         }
     }

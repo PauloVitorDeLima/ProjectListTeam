@@ -26,9 +26,9 @@ namespace ListaEncadeadaDeTimesBrasileiros
             if (validateField())
             {
                 //Popular as variaveis
-                String Time = txtBxNomeTime.ToString();
-                String Estadio = TxtBxEstadio.ToString();
-                String Treinador = TxtBxTreinador.ToString();
+                String Time = txtBxNomeTime.Text;
+                String Estadio = TxtBxEstadio.Text;
+                String Treinador = TxtBxTreinador.Text;
                 int Jogador = Convert.ToInt32(numericJogadores.Value);
                 Time timeNovo;
 
@@ -38,7 +38,7 @@ namespace ListaEncadeadaDeTimesBrasileiros
                 alteraListaTimes.InsereInicio(timeNovo);
 
                 RichTextBox.Clear();
-                RichTextBox.AppendText("NOVO TIME CADASTRADO: \n ");
+                RichTextBox.AppendText("NOVO TIME CADASTRADO! \n ");
             }
         }
 
@@ -47,9 +47,9 @@ namespace ListaEncadeadaDeTimesBrasileiros
             if (validateField())
             {
                 //Popular as variaveis
-                String Time = txtBxNomeTime.ToString();
-                String Estadio = TxtBxEstadio.ToString();
-                String Treinador = TxtBxTreinador.ToString();
+                String Time = txtBxNomeTime.Text;
+                String Estadio = TxtBxEstadio.Text;
+                String Treinador = TxtBxTreinador.Text;
                 int Jogador = Convert.ToInt32(numericJogadores.Value);
                 Time timeNovo;
 
@@ -59,15 +59,31 @@ namespace ListaEncadeadaDeTimesBrasileiros
                 alteraListaTimes.InsereFim(timeNovo);
 
                 RichTextBox.Clear();
-                RichTextBox.AppendText("NOVO TIME CADASTRADO: \n ");
+                RichTextBox.AppendText("NOVO TIME CADASTRADO! \n ");
             }
         }
 
         private void BtListar_Click(object sender, EventArgs e)
         {
-            
-            alteraListaTimes.Listar();
+
+            RichTextBox.Clear();
+            RichTextBox.AppendText(alteraListaTimes.Listar());
         }
+       
+        private void BtRemoverFinal_Click(object sender, EventArgs e)
+        {
+            alteraListaTimes.removerFinal();
+            RichTextBox.Clear();
+            RichTextBox.AppendText("ULTIMO TIME DELETADO! \n ");
+        }
+
+        private void BtRemoverInicio_Click(object sender, EventArgs e)
+        {
+            alteraListaTimes.removerInicio();
+            RichTextBox.Clear();
+            RichTextBox.AppendText("ULTIMO TIME DELETADO! \n ");
+        }
+
         public bool validateField()
         {
             if (txtBxNomeTime != null &&
